@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobilidade Acessível - Protótipo Profissional</title>
+    <!-- Importando FontAwesome para ícones bonitos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <i class="fas fa-hand-holding-heart logo-icon"></i>
+            <h1>Mobilidade Acessível</h1>
+        </header>
+        
+        <main class="app-content">
+            <p class="instrucao">Para onde vamos hoje?</p>
+            
+            <!-- Campo de endereço melhorado -->
+            <div class="input-group">
+                <i class="fas fa-map-marker-alt input-icon"></i>
+                <input type="text" id="endereco" placeholder="Clique abaixo e fale o destino..." readonly>
+            </div>
+
+            <!-- Botão de Microfone Central e Moderno -->
+            <div class="mic-container">
+                <button id="btn-mic" class="btn-microfone">
+                    <i class="fas fa-microphone"></i>
+                    <span class="pulse-ring"></span>
+                </button>
+                <p id="status-mic">Toque para falar</p>
+            </div>
+
+            <!-- Área de Confirmação Sonora (Melhorada) -->
+            <div id="area-confirmacao" class="card-confirmacao escondido">
+                <div class="confirmacao-header">
+                    <i class="fas fa-volume-up"></i>
+                    <h2>Confirme seu destino:</h2>
+                </div>
+                <p id="mensagem-voz" class="endereco-capturado"></p>
+                
+                <div class="botoes-acao">
+                    <button id="btn-confirmar" class="btn-confirmar">
+                        <i class="fas fa-check"></i> SIM, CONFIRMAR
+                    </button>
+                    <button id="btn-repetir" class="btn-repetir">
+                        <i class="fas fa-redo"></i> FALAR DE NOVO
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
